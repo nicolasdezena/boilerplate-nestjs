@@ -1,0 +1,15 @@
+import { Injectable } from '@nestjs/common'; 
+import { utils } from 'src/utils';
+import * as yup from 'yup';
+
+const yupConfig = { 
+  strict: false, 
+  abortEarly: true,
+  stripUnknown: true, 
+  recursive: true, 
+}; 
+
+@Injectable() 
+export class {{pascalCase name}}Validators { 
+  constructor() {} 
+}

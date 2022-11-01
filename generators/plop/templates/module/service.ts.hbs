@@ -1,0 +1,15 @@
+import { Injectable } from '@nestjs/common'; 
+import { utils } from 'src/utils';
+import { {{pascalCase name}}Repository } from './{{lowerCase name}}.repository';
+import { {{pascalCase name}}Validators } from './{{lowerCase name}}.validators';
+import { {{pascalCase name}}Document } from './{{lowerCase name}}.entity'; 
+
+@Injectable()
+export class {{pascalCase name}}Service { 
+  constructor( 
+    private {{camelCase name}}Repository: {{pascalCase name}}Repository, 
+    private {{camelCase name}}Validator: {{pascalCase name}}Validators,
+  ) {} 
+
+  initial(body) {}
+}

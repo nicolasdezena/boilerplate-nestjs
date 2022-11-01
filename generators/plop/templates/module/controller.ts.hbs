@@ -1,0 +1,19 @@
+import {
+  Controller,
+  Delete,
+  Get,
+  Post,
+  Put,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
+import { {{pascalCase name}}Service } from './{{lowerCase name}}.service'; 
+
+@Controller('{{lowerCase name}}') 
+export class {{titleCase name}}Controller { 
+  constructor(private {{camelCase name}}Service: {{pascalCase name}}Service, ) {} 
+  
+  @Post('/') initial(@Req() req): any { 
+    return this.{{camelCase name}}Service.initial(req.body); 
+  } 
+}

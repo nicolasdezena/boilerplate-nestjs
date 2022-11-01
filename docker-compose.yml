@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api-boilerplate:
+    container_name: api-boilerplate
+    build:
+      context: .
+      dockerfile: ./docker/dev.Dockerfile
+    volumes:
+      - /app/node_modules/
+      - .:/app
+    env_file:
+      - ./.env
+    ports:
+      - 3333:3333
+      - 9233:9229
+  api-boilerplate-mongo:
+    container_name: api-boilerplate-mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./data:/data/db
